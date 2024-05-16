@@ -1,0 +1,8 @@
+- name: install nginx
+  hosts: all  # as we have one it will fetch that
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: installed
